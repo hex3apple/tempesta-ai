@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Onion - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Optional: add a little hover flair */
+    .clickable-article:hover {
+      background-color: #f9f9f9;
+      transition: background 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo" style="font-size:2.8em;font-family:serif;letter-spacing:2px;">NEWS</div>
+    <nav class="main-nav" style="display:flex;gap:2em;align-items:center;font-size:1.1em;">
+      <a href="index.html">HOME</a>
+      <a href="business.html">BUSINESS</a>
+      <a href="world.html">WORLD</a>
+      <a href="politics.html">POLITICS</a>
+      <a href="#">TECH</a>
+      <a href="#">HEALTH</a>
+      <span style="font-size:2em;cursor:pointer;margin-left:auto;">&#9776;</span>
+    </nav>
+  </header>
+
+  <main class="main-content" style="display:flex;gap:2em;align-items:flex-start;max-width:1200px;margin:2em auto 0 auto;">
+    
+    <!-- Entire article is now a link to index.html -->
+    <a href="index.html" style="text-decoration: none; color: inherit; display: block; flex:2;">
+      <div class="main-story clickable-article" style="cursor:pointer;">
+        <h1 style="font-size:2.4em;line-height:1.1;margin-bottom:0.3em;">
+          NATURAL DISASTER<br>Severe Tornado Strikes City
+        </h1>
+        <img src="image.png" alt="Tornado" style="width:100%;max-width:600px;border-radius:8px;margin:1.5em 0;" />
+        <p style="font-size:1.2em;margin-bottom:1.2em;">
+          A powerful tornado has caused widespread destruction in the area, leaving many homes and buildings in ruins.
+        </p>
+        <div style="color:#888;font-size:0.95em;">Lorem ipsum &nbsp; &bull; &nbsp; 3h ago</div>
+      </div>
+    </a>
+
+    <!-- Sidebar stays normal -->
+    <aside class="sidebar" style="flex:1;border-left:1px solid #eee;padding-left:2em;">
+      <h2 style="font-size:1.3em;margin-bottom:1em;">Tempest AI Fact-Checking & Alert System</h2>
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="margin-bottom:1.2em;font-weight:600;">Latest Updates on Storm’s Impact</li>
+        <li style="margin-bottom:1.2em;font-weight:600;">Economic Consequences of Disaster</li>
+        <li style="margin-bottom:1.2em;font-weight:600;">International Aid Efforts Underway</li>
+      </ul>
+      <div style="margin-top:2em;background:#f5f7fa;padding:1em 1.2em;border-radius:6px;font-size:1em;">
+        <strong>Tempest AI</strong> is monitoring breaking news and providing real-time fact-checks and alerts for your safety and awareness.
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p style="text-align:center; padding:1em 0;">&copy; 2025 The Onion. All stories are fictional.</p>
+  </footer>
+</body>
+</html>

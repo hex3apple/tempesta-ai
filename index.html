@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Onion - Fake News Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Optional: highlight flash effect */
+    .highlighted-active {
+      animation: flashHighlight 1.2s ease;
+    }
+    @keyframes flashHighlight {
+      0% { background-color: #ffff99; }
+      100% { background-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Redirect to home.html if this is index.html
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+      window.location.replace('home.html');
+    }
+  </script>
+  <header class="main-header" style="background:#fff;border-bottom:1px solid #ddd;padding:0;">
+    <div style="display:flex;align-items:center;max-width:1200px;margin:0 auto;">
+      <div style="background:#b71c1c;color:#fff;font-size:2.5em;font-family:sans-serif;font-weight:900;letter-spacing:2px;padding:0.3em 1.2em 0.2em 1.2em;line-height:1;">NEWS</div>
+      <nav class="main-nav" style="display:flex;gap:2.5em;align-items:center;font-size:1.25em;font-family:sans-serif;font-weight:700;text-transform:uppercase;margin-left:2em;">
+        <a href="index.html" style="color:#fff;background:#b71c1c;padding:0.2em 1.2em 0.15em 1.2em;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.03);text-decoration:none;">Home</a>
+        <a href="world.html" style="color:#232728;text-decoration:none;">World</a>
+        <a href="politics.html" style="color:#232728;text-decoration:none;">Politics</a>
+        <a href="business.html" style="color:#232728;text-decoration:none;">Business</a>
+        <span style="font-size:2em;cursor:pointer;margin-left:2em;">&#9776;</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content" style="display:flex;gap:2.5em;align-items:flex-start;max-width:1200px;margin:2.5em auto 0 auto;">
+    <section style="flex:2;min-width:0;">
+      <h1 style="font-size:3.2em;line-height:1.05;margin-bottom:0.15em;font-family:sans-serif;font-weight:900;letter-spacing:-2px;">NATURAL DISASTER<br><span style="font-size:1.1em;">Severe Tornado Strikes City</span></h1>
+      <div style="font-size:1.35em;color:#232728;margin-bottom:1.2em;font-family:sans-serif;max-width:90%;">A powerful tornado has caused widespread destruction in the area, leaving many homes and buildings in ruins.</div>
+      <img src="image.png" alt="Tornado" style="width:100%;max-width:700px;border-radius:6px;margin:1.5em 0 0.5em 0;box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
+    </section>
+    <aside style="flex:1;min-width:260px;padding-left:2.5em;border-left:1.5px solid #e0e0e0;">
+      <div style="display:flex;flex-direction:column;gap:2em;">
+        <div style="font-size:2em;font-family:sans-serif;font-weight:800;margin-bottom:0.5em;line-height:1.1;">Latest Updates on Storm's Impact</div>
+        <hr style="border:none;border-top:1.5px solid #e0e0e0;margin:0.5em 0;" />
+        <div style="font-size:2em;font-family:sans-serif;font-weight:800;margin-bottom:0.5em;line-height:1.1;">Economic Consequences of Disaster</div>
+        <hr style="border:none;border-top:1.5px solid #e0e0e0;margin:0.5em 0;" />
+        <div style="font-size:2em;font-family:sans-serif;font-weight:800;line-height:1.1;">International Aid Efforts Underway</div>
+      </div>
+    </aside>
+  </main>
+  <!-- End of file -->

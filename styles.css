@@ -1,0 +1,284 @@
+/* ======================
+   GENERAL STYLES
+   ====================== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  color: #232728;
+  line-height: 1.6;
+}
+
+a {
+  color: #c0392b;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ======================
+   HEADER & NAV
+   ====================== */
+
+.main-header {
+  background-color: #232728;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   MAIN CONTENT
+   ====================== */
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.main-story {
+  flex: 3;
+}
+
+.main-story h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.main-story h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #c0392b;
+}
+
+.main-story p {
+  margin-bottom: 1rem;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+}
+
+/* ======================
+   SIDEBAR STYLING
+   ====================== */
+
+.sidebar {
+  flex: 1;
+  background: #f9f7f3;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 260px;
+  max-width: 350px;
+  margin-top: 0.5rem;
+}
+
+.sidebar-article {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-article:hover {
+  transform: translateY(-2px);
+}
+
+.sidebar-article h4 {
+  margin: 0 0 0.3em 0;
+  font-size: 1.1rem;
+  color: #c0392b;
+  font-weight: 700;
+}
+
+.sidebar-article p {
+  margin: 0.2em 0;
+  font-size: 1rem;
+  color: #232728;
+}
+
+.sidebar-article img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* ======================
+   FOOTER
+   ====================== */
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #232728;
+  color: #fff;
+  margin-top: 2rem;
+  border-radius: 0 0 8px 8px;
+  font-size: 1rem;
+}
+
+/* ======================
+   TEMPESTA AI SIDEBAR
+   ====================== */
+
+#tempesta-panel {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 998;
+}
+
+#tempesta-panel.open {
+  right: 0;
+}
+
+#tempesta-panel h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+#tempesta-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.truth-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.red { background: #e74c3c; }
+.yellow { background: #f1c40f; }
+.green { background: #2ecc71; }
+
+/* ======================
+   TEMPESTA AI HIGHLIGHTS
+   ====================== */
+
+.truthy-scan span {
+  padding: 0.1em 0.2em;
+  border-radius: 4px;
+  margin-right: 0.1em;
+}
+
+.truthy-scan .green {
+  background: rgba(46, 204, 113, 0.2);
+}
+
+.truthy-scan .yellow {
+  background: rgba(241, 196, 15, 0.2);
+}
+
+.truthy-scan .red {
+  background: rgba(231, 76, 60, 0.2);
+}
+
+.truthy-scan span::after {
+  content: attr(data-label);
+  font-size: 0.7rem;
+  color: #555;
+  margin-left: 0.4em;
+  opacity: 0.7;
+}
+
+/* ======================
+   TEMPESTA TOGGLE BUTTON
+   ====================== */
+
+#tempesta-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999;
+  background: #c0392b;
+  color: #fff;
+  padding: 0.8em 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 0.95rem;
+}
+
+#tempesta-toggle:hover {
+  background: #e74c3c;
+}
+
+/* ======================
+   RESPONSIVE
+   ====================== */
+
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .main-story h1 {
+    font-size: 2rem;
+  }
+
+  .main-story h2 {
+    font-size: 1.4rem;
+  }
+
+  #tempesta-toggle {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
