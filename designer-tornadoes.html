@@ -1,3 +1,11 @@
+  <script>
+  // Storm alert after 30 seconds
+  setTimeout(function() {
+    if (document.getElementById('tempesta-panel').style.display === 'block') {
+      alert('🌩️ TEMPESTA AI Storm Warning: Satirical winds detected! Proceed with caution.');
+    }
+  }, 30000);
+  </script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Disaster Daily - Satirical News Portal</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
 </head>
 <body>
 
@@ -21,12 +30,48 @@
 
   <!-- MAIN CONTENT -->
   <main class="main-content">
-    <section class="main-story">
-      <!-- JS will render the main article here -->
-    </section>
+    <div class="main-story">
+      <h1>SCIENTISTS SAY TORNADOES NOW COMING IN DESIGNER COLORS</h1>
+      <h2 style="font-weight:400;font-size:1.3em;margin-top:0.2em;">Fashion Meets Fury in the Atmosphere’s Boldest Rebrand Yet</h2>
+      <p><strong>OKLAHOMA CITY, OK</strong> — In what meteorologists are calling “an unintentional but slay-worthy development,” tornadoes across the Midwest are now appearing in a stunning array of designer shades—from moody mauve to aggressive avocado—following what experts believe is an atmospheric shift driven by microplastics, ozone weirdness, and probably Instagram.</p>
+      <p>“We used to classify tornadoes by wind speed,” said NOAA storm analyst Dr. Vivian Striker, pointing to a swirling funnel cloud in a tasteful matte lavender. “Now we also consider undertone, finish, and whether it clashes with the surrounding landscape.”</p>
+      <p>The discovery was made during Storm Season 2025, when storm chasers began noticing that the usual gray-green twisters had developed what one field report called “a suspiciously curated palette.” The shift sparked debate, delight, and at least one Fashion Week crossover.</p>
+      <h3>F-Scale Updated to F(ierce)-Scale</h3>
+      <p>In response, the Fujita Scale has been expanded to account for aesthetic impact. Under the new guidelines, an F3 tornado in "Wet Cement Taupe" is considered less menacing than an F2 in “Sinister Coral with a satin finish.”</p>
+      <p>“We’ve entered an era of expressive weather,” said climatologist Lorenzo Kim. “Nature isn’t just angry—it’s serving looks.”</p>
+      <h3>The Meteorological Runway</h3>
+      <p>Tornado enthusiasts have flooded StormTok with videos of stylish storms set to Lana Del Rey and runway music. The most viral: a dual-spout supercell in Kansas wearing “Dusty Rose” and “Midnight Smoke” like it just stepped out of a Calvin Klein ad.</p>
+      <p>Local boutiques have responded quickly, launching capsule collections of storm-inspired outerwear:</p>
+      <ul>
+        <li>“Violent Violet” trench coats</li>
+        <li>“Twilight Twister” windbreakers</li>
+        <li>A bucket hat line simply called Debris</li>
+      </ul>
+      <p>“We’re just trying to match the sky,” said designer and part-time siren enthusiast Ella Raines.</p>
+      <h3>Not Everyone Is on Board</h3>
+      <p>Some meteorologists have criticized the color craze as “a distraction from the structural damage and general chaos tornadoes still cause.” But StormTok influencers argue it’s a way to raise awareness.</p>
+      <p>“If a pastel cyclone makes you finally get an emergency kit, who’s really winning?” said @funnelgirl420, while applying lip gloss in front of a slowly rotating chartreuse storm cloud.</p>
+      <h3>Insurance Companies Respond with Color-Based Premiums</h3>
+      <p>Several insurers have introduced a new policy system where claims are processed faster if the tornado was “a cool tone.” Homeowners in warm-tone twister zones may face higher premiums unless they agree to “a more neutral siding.”</p>
+      <h3>What You Should Do Right Now</h3>
+      <ul>
+        <li>Update your weather app to support full RGB alerts</li>
+        <li>Stop calling every colorful sky “a filter”—it’s not</li>
+        <li>Repaint storm shelters in low-contrast colors to avoid clashing with incoming spirals</li>
+        <li>Never describe a tornado as “cute,” even if it’s giving Y2K chaos in periwinkle</li>
+      </ul>
+      <h3>Update: Vogue Declares Tornadoes the ‘It Girl of Climate Change’</h3>
+      <p>The August issue features a cover photo of a wind turbine caught in an F4 swirl, captioned: “Twist of Fate: How the Sky is Reclaiming the Catwalk.”</p>
+      <p>Whether it’s the end times or just a really dramatic weather cycle, one thing’s clear: this season’s hottest accessory… is 300 mph winds in a bold new hue.</p>
+    </div>
 
     <aside class="sidebar" id="sidebar-articles">
-      <!-- JS will render sidebar articles here -->
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="margin-bottom:1.2em;"><a href="texas-breeze.html" style="display:block;padding:1em 1.2em;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.04);color:#232728;text-decoration:none;font-weight:600;">Texas Declares State of Emergency Over Mild Breeze</a></li>
+        <li style="margin-bottom:1.2em;"><a href="sandbags.html" style="display:block;padding:1em 1.2em;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.04);color:#232728;text-decoration:none;font-weight:600;">Study Finds 9 out of 10 Sandbags Useless but Comforting</a></li>
+        <li style="margin-bottom:1.2em;"><a href="stormtok.html" style="display:block;padding:1em 1.2em;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.04);color:#232728;text-decoration:none;font-weight:600;">Meteorologists Launch Spin-off Channel: StormTok</a></li>
+        <li style="margin-bottom:1.2em;"><a href="europe-siesta.html" style="display:block;padding:1em 1.2em;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.04);color:#232728;text-decoration:none;font-weight:600;">Europe Extends Siesta to Full Workweek—Productivity Measured in Espresso Shots</a></li>
+      </ul>
     </aside>
   </main>
 
@@ -36,12 +81,134 @@
   </footer>
 
   <!-- TEMPESTA AI Button -->
-  <button id="tempesta-toggle">
+  <button id="tempesta-toggle" style="position:fixed;bottom:2em;right:2em;z-index:1000;">🔍 TEMPESTA AI</button>
+
+  <!-- TEMPESTA AI Sidebar -->
+  <aside id="tempesta-panel" style="display:none;position:fixed;top:0;right:0;width:340px;max-width:90vw;height:100vh;background:#fff;box-shadow:-2px 0 16px rgba(0,0,0,0.12);padding:2em 1.5em 1em 1.5em;z-index:2000;overflow-y:auto;">
+    <button id="tempesta-close" style="position:absolute;top:1em;right:1em;background:none;border:none;font-size:1.7em;cursor:pointer;line-height:1;">&times;</button>
+    <h2 style="margin-top:0.2em;">TEMPESTA AI Scan</h2>
+    <ul id="tempesta-explanations" style="padding-left:0;list-style:none;"></ul>
+    <p style="font-size: 0.75rem; margin-top: 1rem; opacity: 0.7;">* TEMPESTA AI is powered entirely by vibes. No actual facts were harmed in the making of this algorithm.</p>
+  </aside>
+
+  <script>
+  const labelMap = {
+    green: {
+      label: '🟢 TRUE',
+      explanation: 'Certified by the International Society of Obvious Facts. May cause smugness.'
+    },
+    yellow: {
+      label: '🟡 LOOK INTO',
+      explanation: 'This claim is in a quantum state of truth. Both true and false until observed by your aunt on Facebook.'
+    },
+    red: {
+      label: '🔴 FALSE',
+      explanation: 'This is so false, it was last seen running for office. Handle with disbelief.'
+    }
+  };
+
+  function splitIntoSegments(text) {
+    return text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
+  }
+
+  function runTempestaScan() {
+    const story = document.querySelector('.main-story');
+    if (!story) return;
+    let segmentsAll = [];
+    story.querySelectorAll('p, h2, h3').forEach(block => {
+      if (!block.dataset.original) block.dataset.original = block.innerHTML;
+      let segments = splitIntoSegments(block.textContent).map(seg => ({ seg, block }));
+      segmentsAll = segmentsAll.concat(segments);
+    });
+    for (let i = segmentsAll.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [segmentsAll[i], segmentsAll[j]] = [segmentsAll[j], segmentsAll[i]];
+    }
+    const colors = ['green', 'yellow', 'red'];
+    let colorCounts = { green: 0, yellow: 0, red: 0 };
+    let chosen = [];
+    for (let seg of segmentsAll) {
+      let availableColors = colors.filter(c => colorCounts[c] < 2);
+      if (availableColors.length === 0 || chosen.length === 6) break;
+      let color = availableColors[Math.floor(Math.random() * availableColors.length)];
+      colorCounts[color]++;
+      chosen.push({ ...seg, level: color });
+    }
+    story.querySelectorAll('p, h2, h3').forEach(block => {
+      block.innerHTML = block.dataset.original;
+    });
+    let explanationsFinal = [];
+    chosen.forEach((item, idx) => {
+      const { seg, block, level } = item;
+      const id = `tempesta-hl-${idx}`;
+      let html = block.innerHTML;
+      let safeSeg = seg.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      let regex = new RegExp(safeSeg);
+      block.innerHTML = html.replace(regex, `<span class="tempesta-hl ${level}" data-id="${id}" style="cursor:pointer;">${seg}</span>`);
+      explanationsFinal.push({
+        id,
+        level,
+        text: seg.trim(),
+        explanation: labelMap[level].explanation
+      });
+    });
+    const sidebar = document.getElementById('tempesta-explanations');
+    sidebar.innerHTML = explanationsFinal.map(e =>
+      `<li style="margin-bottom:1em;">
+        <span class="${e.level}" data-id="${e.id}" style="font-weight:bold;cursor:pointer;">${labelMap[e.level].label}</span>
+        <span style="margin-left:0.5em;">${e.text}</span>
+        <div style="font-size:0.95em;color:#888;margin-left:1.5em;">${e.explanation}</div>
+      </li>`
+    ).join('');
+  }
+
+  function clearTempestaScan() {
+    const story = document.querySelector('.main-story');
+    if (!story) return;
+    story.querySelectorAll('p, h2, h3').forEach(block => {
+      if (block.dataset.original) block.innerHTML = block.dataset.original;
+    });
+    document.getElementById('tempesta-explanations').innerHTML = '';
+  }
+
+  function toggleTempestaPanel() {
+    const panel = document.getElementById('tempesta-panel');
+    if (!panel) return;
+    const isOpen = panel.style.display === 'block';
+    if (isOpen) {
+      panel.style.display = 'none';
+      clearTempestaScan();
+    } else {
+      panel.style.display = 'block';
+      runTempestaScan();
+    }
+  }
+
+  document.getElementById('tempesta-toggle').addEventListener('click', toggleTempestaPanel);
+  document.getElementById('tempesta-close').addEventListener('click', function() {
+    const panel = document.getElementById('tempesta-panel');
+    panel.style.display = 'none';
+    clearTempestaScan();
+  });
+  document.getElementById('tempesta-explanations').addEventListener('click', function(e) {
+    const id = e.target.dataset.id;
+    if (!id) return;
+    const el = document.querySelector(`.tempesta-hl[data-id="${id}"]`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.background = '#fffae0';
+      setTimeout(() => { el.style.background = ''; }, 1200);
+    }
+  });
+  </script>
+
+  <!-- TEMPESTA AI Button -->
+  <button id="tempesta-toggle" style="position:fixed;bottom:2em;right:2em;z-index:1000;">
     🔍 TEMPESTA AI
   </button>
 
   <!-- TEMPESTA AI Sidebar -->
-  <aside id="tempesta-panel">
+  <aside id="tempesta-panel" style="display:none;position:fixed;top:0;right:0;width:340px;max-width:90vw;height:100vh;background:#fff;box-shadow:-2px 0 16px rgba(0,0,0,0.12);padding:2em 1.5em 1em 1.5em;z-index:2000;overflow-y:auto;">
     <h2>TEMPESTA AI Scan</h2>
     <p>This is a satire-scanning overlay. Don't believe a thing it says.</p>
     <ul>
@@ -55,6 +222,15 @@
   </aside>
 
   <!-- JS Script -->
-  <script src="script.js"></script>
+  <script>
+    // Show/hide panel with .open class
+    const panel = document.getElementById('tempesta-panel');
+    if (panel) {
+      const observer = new MutationObserver(() => {
+        panel.style.display = panel.classList.contains('open') ? 'block' : 'none';
+      });
+      observer.observe(panel, { attributes: true, attributeFilter: ['class'] });
+    }
+  </script>
 </body>
 </html>

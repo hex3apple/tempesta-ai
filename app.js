@@ -115,15 +115,41 @@ function wireSidebarClicks() {
 
 /* -------- TEMPESTA AI™ (pure satire) -------- */
 
+
 const labelMap = {
-  green: "🟢 Verified by TEMPESTA*",
-  yellow: "🟡 Possibly True-ish",
-  red: "🔴 Certified Nonsense"
+  green: [
+    "🟢 Verified by TEMPESTA*",
+    "🟢 TRUE: Confirmed by 3 out of 4 imaginary experts",
+    "🟢 Fact-Checked by a Goldfish",
+    "🟢 TRUE: As seen on the Internet",
+    "🟢 TRUE: Endorsed by the Vibe Council"
+  ],
+  yellow: [
+    "🟡 Possibly True-ish",
+    "🟡 LOOK INTO: Needs more vibes",
+    "🟡 Unclear: Consult your local oracle",
+    "🟡 Maybe: Ask again later",
+    "🟡 LOOK INTO: Schrödinger's Fact"
+  ],
+  red: [
+    "🔴 Certified Nonsense",
+    "🔴 FALSE: Debunked by a Magic 8-Ball",
+    "🔴 FALSE: Not even close",
+    "🔴 FALSE: Cited by zero sources",
+    "🔴 FALSE: Only true in an alternate universe"
+  ]
 };
 
 function splitIntoSentences(text) {
-  // naive but fun
-  return text.match(/[^\.!\?]+[\.!\?]+/g) || [text];
+  // Highlight phrases, words, or sentences, including those with punctuation
+  // This regex matches phrases ending with punctuation, or groups of 3-10 words, or single words
+  const phraseRegex = /([^.!?\n]{12,80}[.!?])|((?:\b\w+\b[ ,;:'"-]*){3,10})/g;
+  const matches = text.match(phraseRegex);
+  if (matches) {
+    return matches.map(s => s.trim()).filter(Boolean);
+  }
+  // fallback: split by punctuation
+  return text.split(/(?<=[.!?])\s+/).filter(Boolean);
 }
 
 function randomTruthLevel() {
@@ -134,6 +160,9 @@ function randomTruthLevel() {
 function runTempestaScan() {
   const story = document.querySelector(".main-story");
   if (!story) return;
+
+  // Track used labels to avoid duplicates in a single scan
+  const usedLabels = new Set();
 
   const paragraphs = story.querySelectorAll("p");
   paragraphs.forEach(p => {
@@ -146,7 +175,15 @@ function runTempestaScan() {
     const newHTML = sentences
       .map(s => {
         const level = randomTruthLevel();
-        return `<span class="${level}" data-label="${labelMap[level]}">${s}</span>`;
+        // Pick a random label for this level, avoiding repeats
+        let labels = labelMap[level].filter(l => !usedLabels.has(l));
+        if (labels.length === 0) {
+          // If all labels for this level are used, allow repeats for this level
+          labels = labelMap[level];
+        }
+        const label = labels[Math.floor(Math.random() * labels.length)];
+        usedLabels.add(label);
+        return `<span class="${level}" data-label="${label}">${s}</span>`;
       })
       .join(" ");
 

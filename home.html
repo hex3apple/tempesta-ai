@@ -1,3 +1,11 @@
+  <script>
+  // Storm alert after 30 seconds
+  setTimeout(function() {
+    if (document.getElementById('tempesta-panel').style.display === 'block') {
+      alert('🌩️ TEMPESTA AI Storm Warning: Satirical winds detected! Proceed with caution.');
+    }
+  }, 30000);
+  </script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,50 +23,149 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="logo" style="font-size:2.8em;font-family:serif;letter-spacing:2px;">NEWS</div>
+    <div class="logo" style="font-size:2.8em;font-family:serif;letter-spacing:2px;">THE ONION</div>
     <nav class="main-nav" style="display:flex;gap:2em;align-items:center;font-size:1.1em;">
-      <a href="index.html">HOME</a>
+      <a href="home.html">HOME</a>
       <a href="business.html">BUSINESS</a>
       <a href="world.html">WORLD</a>
       <a href="politics.html">POLITICS</a>
-      <a href="#">TECH</a>
-      <a href="#">HEALTH</a>
       <span style="font-size:2em;cursor:pointer;margin-left:auto;">&#9776;</span>
     </nav>
   </header>
 
-  <main class="main-content" style="display:flex;gap:2em;align-items:flex-start;max-width:1200px;margin:2em auto 0 auto;">
-    
-    <!-- Entire article is now a link to index.html -->
-    <a href="index.html" style="text-decoration: none; color: inherit; display: block; flex:2;">
-      <div class="main-story clickable-article" style="cursor:pointer;">
-        <h1 style="font-size:2.4em;line-height:1.1;margin-bottom:0.3em;">
-          NATURAL DISASTER<br>Severe Tornado Strikes City
-        </h1>
-        <img src="image.png" alt="Tornado" style="width:100%;max-width:600px;border-radius:8px;margin:1.5em 0;" />
-        <p style="font-size:1.2em;margin-bottom:1.2em;">
-          A powerful tornado has caused widespread destruction in the area, leaving many homes and buildings in ruins.
-        </p>
-        <div style="color:#888;font-size:0.95em;">Lorem ipsum &nbsp; &bull; &nbsp; 3h ago</div>
-      </div>
-    </a>
-
-    <!-- Sidebar stays normal -->
-    <aside class="sidebar" style="flex:1;border-left:1px solid #eee;padding-left:2em;">
-      <h2 style="font-size:1.3em;margin-bottom:1em;">Tempest AI Fact-Checking & Alert System</h2>
-      <ul style="list-style:none;padding:0;margin:0;">
-        <li style="margin-bottom:1.2em;font-weight:600;">Latest Updates on Storm’s Impact</li>
-        <li style="margin-bottom:1.2em;font-weight:600;">Economic Consequences of Disaster</li>
-        <li style="margin-bottom:1.2em;font-weight:600;">International Aid Efforts Underway</li>
-      </ul>
-      <div style="margin-top:2em;background:#f5f7fa;padding:1em 1.2em;border-radius:6px;font-size:1em;">
-        <strong>Tempest AI</strong> is monitoring breaking news and providing real-time fact-checks and alerts for your safety and awareness.
-      </div>
-    </aside>
+  <main class="main-content">
+    <h1>Home</h1>
+    <ul style="list-style:none;padding:0;max-width:700px;margin:2em auto 0 auto;">
+      <li style="margin-bottom:1.5em;"><a href="index.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">Severe Tornado Strikes City</a></li>
+      <li style="margin-bottom:1.5em;"><a href="raise-vibes.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">Candidate Promises to Lower Taxes by Raising Expectations and Vibes</a></li>
+      <li style="margin-bottom:1.5em;"><a href="texas-breeze.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">Texas Declares State of Emergency Over Mild Breeze</a></li>
+      <li style="margin-bottom:1.5em;"><a href="startup-nft.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">Startup Monetizes Sandwich Bites as NFTs 2.0; Investors Eat It Up</a></li>
+      <li style="margin-bottom:1.5em;"><a href="oil-logo.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">Oil Giant Unveils Eco-Friendly Logo; Climate Crisis Thanks Them for the PNG</a></li>
+      <li style="margin-bottom:1.5em;"><a href="ceo-paycut.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">CEO Takes “Voluntary” Pay Cut from $80M to $79.9M, Inspires Nation to Sacrifice</a></li>
+      <li style="margin-bottom:1.5em;"><a href="airlines-seat.html" style="font-size:1.15em;font-weight:600;color:#2c3e50;text-decoration:none;">Airlines Debut “Bring Your Own Seat” Fare—Standing Room Sold Separately</a></li>
+    </ul>
   </main>
 
   <footer>
     <p style="text-align:center; padding:1em 0;">&copy; 2025 The Onion. All stories are fictional.</p>
   </footer>
+
+  <!-- TEMPESTA AI Button -->
+  <button id="tempesta-toggle" style="position:fixed;bottom:2em;right:2em;z-index:1000;">🔍 TEMPESTA AI</button>
+
+  <!-- TEMPESTA AI Sidebar -->
+  <aside id="tempesta-panel" style="display:none;position:fixed;top:0;right:0;width:340px;max-width:90vw;height:100vh;background:#fff;box-shadow:-2px 0 16px rgba(0,0,0,0.12);padding:2em 1.5em 1em 1.5em;z-index:2000;overflow-y:auto;">
+    <button id="tempesta-close" style="position:absolute;top:1em;right:1em;background:none;border:none;font-size:1.7em;cursor:pointer;line-height:1;">&times;</button>
+    <h2 style="margin-top:0.2em;">TEMPESTA AI Scan</h2>
+    <ul id="tempesta-explanations" style="padding-left:0;list-style:none;"></ul>
+    <p style="font-size: 0.75rem; margin-top: 1rem; opacity: 0.7;">* TEMPESTA AI is powered entirely by vibes. No actual facts were harmed in the making of this algorithm.</p>
+  </aside>
+
+  <script>
+  const labelMap = {
+    green: {
+      label: '🟢 TRUE',
+      explanation: 'Certified by the International Society of Obvious Facts. May cause smugness.'
+    },
+    yellow: {
+      label: '🟡 LOOK INTO',
+      explanation: 'This claim is in a quantum state of truth. Both true and false until observed by your aunt on Facebook.'
+    },
+    red: {
+      label: '🔴 FALSE',
+      explanation: 'This is so false, it was last seen running for office. Handle with disbelief.'
+    }
+  };
+
+  function splitIntoSegments(text) {
+    return text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
+  }
+
+  function runTempestaScan() {
+    const story = document.querySelector('.main-story');
+    if (!story) return;
+    let segmentsAll = [];
+    story.querySelectorAll('p, h2, h3').forEach(block => {
+      if (!block.dataset.original) block.dataset.original = block.innerHTML;
+      let segments = splitIntoSegments(block.textContent).map(seg => ({ seg, block }));
+      segmentsAll = segmentsAll.concat(segments);
+    });
+    for (let i = segmentsAll.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [segmentsAll[i], segmentsAll[j]] = [segmentsAll[j], segmentsAll[i]];
+    }
+    const colors = ['green', 'yellow', 'red'];
+    let colorCounts = { green: 0, yellow: 0, red: 0 };
+    let chosen = [];
+    for (let seg of segmentsAll) {
+      let availableColors = colors.filter(c => colorCounts[c] < 2);
+      if (availableColors.length === 0 || chosen.length === 6) break;
+      let color = availableColors[Math.floor(Math.random() * availableColors.length)];
+      colorCounts[color]++;
+      chosen.push({ ...seg, level: color });
+    }
+    story.querySelectorAll('p, h2, h3').forEach(block => {
+      block.innerHTML = block.dataset.original;
+    });
+    let explanationsFinal = [];
+    chosen.forEach((item, idx) => {
+      const { seg, block, level } = item;
+      const id = `tempesta-hl-${idx}`;
+      let html = block.innerHTML;
+      let safeSeg = seg.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      let regex = new RegExp(safeSeg);
+      block.innerHTML = html.replace(regex, `<span class=\"tempesta-hl ${level}\" data-id=\"${id}\" style=\"cursor:pointer;\">${seg}</span>`);
+      explanationsFinal.push({
+        id,
+        level,
+        text: seg.trim(),
+        explanation: labelMap[level].explanation
+      });
+    });
+    const sidebar = document.getElementById('tempesta-explanations');
+    sidebar.innerHTML = explanationsFinal.map(e =>
+      `<li style=\"margin-bottom:1em;\">\n        <span class=\"${e.level}\" data-id=\"${e.id}\" style=\"font-weight:bold;cursor:pointer;\">${labelMap[e.level].label}</span>\n        <span style=\"margin-left:0.5em;\">${e.text}</span>\n        <div style=\"font-size:0.95em;color:#888;margin-left:1.5em;\">${e.explanation}</div>\n      </li>`
+    ).join('');
+  }
+
+  function clearTempestaScan() {
+    const story = document.querySelector('.main-story');
+    if (!story) return;
+    story.querySelectorAll('p, h2, h3').forEach(block => {
+      if (block.dataset.original) block.innerHTML = block.dataset.original;
+    });
+    document.getElementById('tempesta-explanations').innerHTML = '';
+  }
+
+  function toggleTempestaPanel() {
+    const panel = document.getElementById('tempesta-panel');
+    if (!panel) return;
+    const isOpen = panel.style.display === 'block';
+    if (isOpen) {
+      panel.style.display = 'none';
+      clearTempestaScan();
+    } else {
+      panel.style.display = 'block';
+      runTempestaScan();
+    }
+  }
+
+  document.getElementById('tempesta-toggle').addEventListener('click', toggleTempestaPanel);
+  document.getElementById('tempesta-close').addEventListener('click', function() {
+    const panel = document.getElementById('tempesta-panel');
+    panel.style.display = 'none';
+    clearTempestaScan();
+  });
+  document.getElementById('tempesta-explanations').addEventListener('click', function(e) {
+    const id = e.target.dataset.id;
+    if (!id) return;
+    const el = document.querySelector(`.tempesta-hl[data-id=\"${id}\"]`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.background = '#fffae0';
+      setTimeout(() => { el.style.background = ''; }, 1200);
+    }
+  });
+  </script>
 </body>
 </html>
